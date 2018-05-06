@@ -20,6 +20,7 @@ namespace netapp
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .UseUrls("http://*:5000;http://localhost:5001;https://hostname:5002")
                 .Build();
     }
 }
